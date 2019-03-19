@@ -40,19 +40,4 @@ Alternatively, since Liénard equation itself is also an autonomous differential
     v d v d x + f ( x ) v + g ( x ) = 0 {\displaystyle v{dv \over dx}+f(x)v+g(x)=0} v{dv \over dx}+f(x)v+g(x)=0
 
 which belongs to Abel equation of the second kind.[2][3]
-Example
-
-The Van der Pol oscillator
-
-    d 2 x d t 2 − μ ( 1 − x 2 ) d x d t + x = 0 {\displaystyle {d^{2}x \over dt^{2}}-\mu (1-x^{2}){dx \over dt}+x=0} {d^{2}x \over dt^{2}}-\mu (1-x^{2}){dx \over dt}+x=0
-
-is a Liénard equation. The solution of a Van der Pol oscillator has a limit cycle. Such cycle has a solution of a Liénard equation with negative f ( x ) {\displaystyle f(x)} f(x) at small | x | {\displaystyle |x|} |x| and positive f ( x ) {\displaystyle f(x)} f(x) otherwise. The Van der Pol equation has no exact, analytic solution. Such solution for a limit cycle exists if f ( x ) {\displaystyle f(x)} f(x) is a constant piece-wise function.[4]
-Liénard's theorem
-
-A Liénard system has a unique and stable limit cycle surrounding the origin if it satisfies the following additional properties:[5]
-
-    g(x) > 0 for all x > 0;
-    lim x → ∞ F ( x ) := lim x → ∞ ∫ 0 x f ( ξ ) d ξ   = ∞ ; {\displaystyle \lim _{x\to \infty }F(x):=\lim _{x\to \infty }\int _{0}^{x}f(\xi )d\xi \ =\infty ;} \lim _{{x\to \infty }}F(x):=\lim _{{x\to \infty }}\int _{0}^{x}f(\xi )d\xi \ =\infty ;
-    F(x) has exactly one positive root at some value p, where F(x) < 0 for 0 < x < p and F(x) > 0 and monotonic for x > p.
-
 
