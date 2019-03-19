@@ -1,0 +1,143 @@
+commit bce93d1e389e38074256093ca4e91c6a2addbf21
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 19:13:47 2019 +0200
+
+    näin
+
+ tiedostoja/file1             | 2 --
+ tiedostoja/{file2 => file22} | 0
+ 2 files changed, 2 deletions(-)
+
+commit 6f82bdf03559dfe1dafaeacc7b4f1b218aa89d17
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 19:08:42 2019 +0200
+
+    säätöä
+
+ tiedostoja/file2 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 81eb3276707f082b5fe9dbb54717f510021e6d71
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 19:06:42 2019 +0200
+
+    joo
+
+ tiedostoja/file1 | 2 ++
+ tiedostoja/file3 | 0
+ 2 files changed, 2 insertions(+)
+
+commit b3d71deeba858a93ffc14363af73f83c7c12c8ad
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 19:04:44 2019 +0200
+
+    en tiiä
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit ed17aa028dabccd3ab3e06caa9ba9b8f24bc29b9
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 18:55:55 2019 +0200
+
+    fileet lisätty
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit d7e5f30252296f5fcf713aba110b3763b16dafde
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 18:37:12 2019 +0200
+
+    kyl se salee auttaa
+
+ eka.txt    | 11 ++---------
+ kolmas.txt |  2 +-
+ 2 files changed, 3 insertions(+), 10 deletions(-)
+
+commit d4d850dc923343739872fcd8cc9b2c17d07b258a
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 18:30:04 2019 +0200
+
+    pitääköhän tähän aina kirjoittaa jotain informatiivista
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9e53c4790c157887dfd14777765c694c7977cca9
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 18:27:51 2019 +0200
+
+    poistin toisen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit db058a22d3c38c7b1ae07bcf36ef955d011641cd
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 18:23:18 2019 +0200
+
+    ja poistin sitä tekstiä
+
+ tiedosto.txt | 15 ---------------
+ 1 file changed, 15 deletions(-)
+
+commit d5bc59db206a6b99b97dec4adb31666759bda50c
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 18:21:14 2019 +0200
+
+    lisäsin sitä tekstiä
+
+ tiedosto.txt | 57 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 57 insertions(+)
+
+commit 3d89506be122c849fcf95348326028f0187c43a2
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 18:14:28 2019 +0200
+
+    lisäys
+
+ stuff/jokin.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b32e06f1ac790022a95e42f066a3e2ded5bd1f0b
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 18:10:59 2019 +0200
+
+    muutos
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 2e3d84445e896972bd504a91398d4f879da18dc9
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 18:08:30 2019 +0200
+
+    lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b73d519aaad2d07053a25cd29f9bf71347a6159d
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 18:03:47 2019 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 89869bb5db6952f5447141cdc9a5938b9363386a
+Author: aapolauk <aapo.laukkarinen@outlook.com>
+Date:   Tue Mar 19 17:55:53 2019 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
