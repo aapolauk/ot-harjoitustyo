@@ -1,18 +1,11 @@
 No terve. Ai, että kun on mukavaa täällä OT kurssilla.
 
+Ois voinu tehä nää hieman aikaisemmin.
+
 
 In mathematics, more specifically in the study of dynamical systems and differential equations, a Liénard equation[1] is a second order differential equation, named after the French physicist Alfred-Marie Liénard.
 
 During the development of radio and vacuum tube technology, Liénard equations were intensely studied as they can be used to model oscillating circuits. Under certain additional assumptions Liénard's theorem guarantees the uniqueness and existence of a limit cycle for such a system.
-Contents
-
-    1 Definition
-    2 Liénard system
-    3 Example
-    4 Liénard's theorem
-    5 See also
-    6 Footnotes
-    7 External links
 
 Definition
 
