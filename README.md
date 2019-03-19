@@ -1,6 +1,6 @@
 # Otsikko
 
-*Moikka* oon **Aapo**
+*Moikka* oon **Aapo**.
 
 ## Tehtävät
 
