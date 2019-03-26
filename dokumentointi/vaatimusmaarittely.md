@@ -10,6 +10,6 @@ Sovellus jolla voi pelata miinaharava peliä.
 
 ### Jatkokehitysideat
 
-- Aikalaskuri, jonka perusteella saa pisteitä
+- Aikalaskuri jonka perusteella saa pisteitä
 
 - Tietokanta jossa on pelaajien nimiä ja heidän ennätys pisteitä
