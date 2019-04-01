@@ -33,9 +33,6 @@ public class Tile extends StackPane {
 
         setOnMouseClicked(event -> open());
     }
-    boolean isValidPoint(int x, int y) {
-        return (x >= 0 && x < 20 && y >= 0 && y < 15);
-    }
     
     public void open() {
         if (isOpen) return;
