@@ -1,4 +1,7 @@
+package domain;
 
+
+import domain.Tile;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.layout.Pane;
@@ -86,4 +89,10 @@ public class appLogic {
     boolean isValidPoint(int x, int y) {
         return (x >= 0 && x < xTiles && y >= 0 && y < yTiles);
     }
+
+    public Tile[][] getGrid() {
+        return grid;
+    }
+    
+    
 }
