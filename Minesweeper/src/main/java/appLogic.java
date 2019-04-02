@@ -15,7 +15,6 @@ public class appLogic {
     final Tile[][] grid = new Tile[xTiles][yTiles];
     
     boolean explosion = false;
-    
 
     public Pane createField() {
         Pane root = new Pane();
@@ -23,7 +22,7 @@ public class appLogic {
 
         for (int y = 0; y < yTiles; y++) {
             for (int x = 0; x < xTiles; x++) {
-                Tile tile = new Tile(x, y, Math.random() < 0.4);
+                Tile tile = new Tile(x, y, Math.random() < 0.3, this);
 
                 grid[x][y] = tile;
                 root.getChildren().add(tile);
@@ -54,34 +53,8 @@ public class appLogic {
         }
         return root;
     }
-    
-    
-    
-    void open(Tile tile) {
-        
-        if (tile.isOpen && !explosion)return;
-        
-        tile.isOpen = true;
-        tile.text.setVisible(true);
-        tile.border.setFill(null);
-        
-        if (tile.hasBomb && !explosion) {
-            System.out.println("BOOOM!");
-            explosion = true;
-            openAll();
-        }
-    }
-    
-    void openAll(){
-        for (int i = 0; i < grid[0].length; i++) {
-            for (int j = 0; j < grid.length; j++) {
-                open(grid[i][j]);
-            }
-        }
-    };
-    
 
-    private List<Tile> getNeighbors(Tile tile) {
+    List<Tile> getNeighbors(Tile tile) {
         List<Tile> neighbors = new ArrayList<>();
 
         int[] coordinates = new int[]{
@@ -113,9 +86,4 @@ public class appLogic {
     boolean isValidPoint(int x, int y) {
         return (x >= 0 && x < xTiles && y >= 0 && y < yTiles);
     }
-
-    public Tile[][] getGrid() {
-        return grid;
-    }
-    
 }
