@@ -22,7 +22,7 @@ public class appLogic {
 
         for (int y = 0; y < yTiles; y++) {
             for (int x = 0; x < xTiles; x++) {
-                Tile tile = new Tile(x, y, Math.random() < 0.3, this);
+                Tile tile = new Tile(x, y, Math.random() < 0.1, this);
 
                 grid[x][y] = tile;
                 root.getChildren().add(tile);
