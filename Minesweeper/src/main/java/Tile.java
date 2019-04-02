@@ -26,7 +26,7 @@ public class Tile extends StackPane {
         text.setText(hasBomb ? "X" : "");
         text.setVisible(false);
 
-        getChildren().addAll(border, text);
+        this.getChildren().addAll(border, text);
 
         setTranslateX(x * size);
         setTranslateY(y * size);
