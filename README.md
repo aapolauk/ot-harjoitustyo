@@ -1,13 +1,11 @@
-# Otsikko
+# Miinaharava
 
-*Moikka* oon **Aapo**.
+Soveluksella on tarkoitus pelata miinaharavaa.
 
-## Tehtävät
+## Dokumentaatio
 
-### Viikko 1
-[gitlog.txt](https://github.com/aapolauk/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+[Työaikakirjanpito](https://github.com/aapolauk/ot-harjoitustyo/blob/master/dokumentointi/tyoaikakirjanpito.md)
 
-[komentorivi.txt](https://github.com/aapolauk/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+[Vaatimusmäärittely](https://github.com/aapolauk/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
-### Viikko2
-[tyoaikakirjanpito.md](https://github.com/aapolauk/ot-harjoitustyo/blob/master/dokumentointi/tyoaikakirjanpito.md)
+
