@@ -4,12 +4,24 @@
 Sovellus jolla voi pelata miinaharava peliä.
 ### Perusversion tarjoama toiminnallisuus
 
-- Peli toimii oikein.
+- jonkinlainen graaffinen liittymä
 
-- Eri vaikeustasoja
+- kun ruutua klikkaa, niin sieltä paljastuu joko pommi tai numero joka kertoo pommien määrän viereisissä ruuduissa
+
+- jos klikatun ruudun naapuriruidussa ei ole miinaa, kaikki siihen yhteydessä olevat ruudut paljastuu joiden naapurissa ei myöskään ole miinaa, tämän lisäksi tämän paljastetun alueen reunalla olevat ruudut, joiden naapurissa on miina paljastuu.
+
+- jos pommi räjähtää, niin peli loppuu
+
+- pelin voi aloittaa uudestaan
+
+- ruutuja voi merkitä siten, että merkittyjä ruutuja ei voi avata
+
+- ruudun merkin voi poistaa
 
 ### Jatkokehitysideat
 
-- Aikalaskuri jonka perusteella saa pisteitä
+- pelaaja voi muokata pelikenttää itse (kentän koko, miinojen määrä yms.)
 
-- Tietokanta jossa on pelaajien nimiä ja heidän ennätys pisteitä
+- aikalaskuri
+
+- tietokanta jossa on pelaajien nimiä ja heidän ennätys aikoja
