@@ -8,11 +8,13 @@ import javafx.stage.Stage;
 public class SweeperApp extends Application {
 
     appLogic logic = new appLogic();
+    Scene scene;
     
     @Override
     public void start(Stage stage) throws Exception {
-        Scene scene = new Scene(logic.createField());
-
+        scene = new Scene(logic.createField());
+        
+        stage.setTitle("Minesweeper");
         stage.setScene(scene);
         stage.show();
     }

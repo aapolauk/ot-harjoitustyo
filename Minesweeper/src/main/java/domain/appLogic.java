@@ -1,7 +1,6 @@
 package domain;
 
 
-import domain.Tile;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.layout.Pane;
@@ -15,17 +14,22 @@ public class appLogic {
     private final int xTiles = 20;
     private final int yTiles = 15;
 
-    final Tile[][] grid = new Tile[xTiles][yTiles];
+    private final Tile[][] grid = new Tile[xTiles][yTiles];
     
     boolean explosion = false;
+    
+    int tilesThatDoNotHaveBombs = xTiles*yTiles;
 
     public Pane createField() {
         Pane root = new Pane();
         root.setPrefSize(Width, Height);
+        
 
         for (int y = 0; y < yTiles; y++) {
             for (int x = 0; x < xTiles; x++) {
-                Tile tile = new Tile(x, y, Math.random() < 0.1, this);
+                boolean putBomb = (Math.random() < 0.05);
+                Tile tile = new Tile(x, y, putBomb, this);
+                if(putBomb) tilesThatDoNotHaveBombs--;
 
                 grid[x][y] = tile;
                 root.getChildren().add(tile);
@@ -38,19 +42,19 @@ public class appLogic {
 
                 if (tile.hasBomb) continue;
 
-                long bombs = getNeighbors(tile).stream().filter(t -> t.hasBomb).count();
+                long neighbouringBombs = getNeighbors(tile).stream().filter(t -> t.hasBomb).count();
 
-                if (bombs > 0){
-                    tile.getText().setText(String.valueOf(bombs));
+                if (neighbouringBombs > 0){
+                    tile.getText().setText(String.valueOf(neighbouringBombs));
                     
-                    if(bombs == 1) tile.getText().setFill(Color.BLUE);
-                    if(bombs == 2) tile.getText().setFill(Color.GREEN);
-                    if(bombs == 3) tile.getText().setFill(Color.MEDIUMTURQUOISE);
-                    if(bombs == 4) tile.getText().setFill(Color.BROWN);
-                    if(bombs == 5) tile.getText().setFill(Color.DEEPPINK);
-                    if(bombs == 6) tile.getText().setFill(Color.INDIGO);
-                    if(bombs == 7) tile.getText().setFill(Color.ORANGE);
-                    if(bombs == 8) tile.getText().setFill(Color.CRIMSON);
+                    if(neighbouringBombs == 1) tile.getText().setFill(Color.BLUE);
+                    if(neighbouringBombs == 2) tile.getText().setFill(Color.GREEN);
+                    if(neighbouringBombs == 3) tile.getText().setFill(Color.MEDIUMTURQUOISE);
+                    if(neighbouringBombs == 4) tile.getText().setFill(Color.BROWN);
+                    if(neighbouringBombs == 5) tile.getText().setFill(Color.DEEPPINK);
+                    if(neighbouringBombs == 6) tile.getText().setFill(Color.INDIGO);
+                    if(neighbouringBombs == 7) tile.getText().setFill(Color.ORANGE);
+                    if(neighbouringBombs == 8) tile.getText().setFill(Color.CRIMSON);
                 }
             }
         }

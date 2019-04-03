@@ -1,6 +1,6 @@
 package domain;
 
-
+import java.awt.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -8,14 +8,14 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 public class Tile extends StackPane {
-    
+
     private int x, y;
     private final int size = 40;
     public boolean hasBomb;
     public boolean isOpen = false;
-    
+
     appLogic logic;
-    
+
     public final Rectangle border = new Rectangle(size - 2, size - 2);
     public Text text = new Text();
 
@@ -24,13 +24,11 @@ public class Tile extends StackPane {
         this.y = y;
         this.hasBomb = hasBomb;
         this.logic = logic;
-        
+
         border.setStroke(Color.RED);
         border.setFill(Color.AQUAMARINE);
-        
 
         text.setFont(Font.font(18));
-        
         text.setText(hasBomb ? "X" : "");
         text.setVisible(false);
 
@@ -40,26 +38,37 @@ public class Tile extends StackPane {
         setTranslateY(y * size);
         setOnMouseClicked(event -> open());
     }
-    
+
     void open() {
-        if(logic.explosion) return;
-        if (isOpen)return;
-        
+        if (logic.explosion) {
+            return;
+        }
+        if (isOpen) {
+            return;
+        }
+
         isOpen = true;
         text.setVisible(true);
         border.setFill(null);
-        
-        if(hasBomb) {
-            System.out.println("BOOOM!");
-            logic.explosion = true;
-        }
-        if(text.getText().isEmpty()){
+
+        if (text.getText().isEmpty()) {
             logic.getNeighbors(this).forEach(Tile::open);
         }
+
+        if (hasBomb) {
+            System.out.println("BOOOM!");
+            System.out.println("You lose :[");
+            logic.explosion = true;
+        }
+
+        if (logic.explosion) return;
+
+        if (--logic.tilesThatDoNotHaveBombs == 0) {
+            System.out.println("You win :]");
+            logic.explosion = true;
+        }
     }
-    
-    
-    
+
     public int getX() {
         return x;
     }
