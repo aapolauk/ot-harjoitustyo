@@ -7,7 +7,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 
 
-public class appLogic {
+public class appLogic{
     private final int Width = 800;
     private final int Height = 600;
 
@@ -97,6 +97,4 @@ public class appLogic {
     public Tile[][] getGrid() {
         return grid;
     }
-    
-    
 }
