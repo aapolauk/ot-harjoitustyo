@@ -83,7 +83,7 @@ public class AppLogic {
         List<Tile> neighbors = new ArrayList<>();
 
         int[] coordinates = new int[]{
-            -1, -1,   -1, 0,   -1, 1,   0, -1,   0, 1,   1, -1,   1, 0,   1, 1
+            -1, -1, -1, 0, -1, 1, 0, -1, 0, 1, 1, -1, 1, 0, 1, 1
         };
 
         for (int i = 0; i < coordinates.length; i++) {
