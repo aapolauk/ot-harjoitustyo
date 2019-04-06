@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 public class SweeperApp extends Application {
 
-    appLogic logic = new appLogic(); 
+    AppLogic logic = new AppLogic(); 
     Scene scene;
     
     @Override

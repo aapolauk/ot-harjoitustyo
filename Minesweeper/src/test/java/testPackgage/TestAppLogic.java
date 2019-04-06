@@ -1,7 +1,7 @@
 package testPackgage;
 
 
-import domain.appLogic;
+import domain.AppLogic;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -12,11 +12,11 @@ import domain.*;
 
 public class TestAppLogic {
     
-    appLogic logic;
+    AppLogic logic;
     
     @Before
     public void setUp() {
-        logic = new appLogic();
+        logic = new AppLogic();
     }
     
     @Test 

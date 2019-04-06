@@ -14,12 +14,12 @@ public class Tile extends StackPane {
     public boolean hasBomb;
     public boolean isOpen = false;
 
-    appLogic logic;
+    AppLogic logic;
 
     public final Rectangle border = new Rectangle(size - 2, size - 2);
     public Text text = new Text();
 
-    public Tile(int x, int y, boolean hasBomb, appLogic logic) {
+    public Tile(int x, int y, boolean hasBomb, AppLogic logic) {
         this.x = x;
         this.y = y;
         this.hasBomb = hasBomb;
@@ -61,7 +61,9 @@ public class Tile extends StackPane {
             logic.explosion = true;
         }
 
-        if (logic.explosion) return;
+        if (logic.explosion) {
+            return;
+        }
 
         if (--logic.tilesThatDoNotHaveBombs == 0) {
             System.out.println("You win :]");
