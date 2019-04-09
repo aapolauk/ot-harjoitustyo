@@ -34,7 +34,7 @@ public class Tile extends StackPane {
             }
 
             if (event.getButton() == MouseButton.SECONDARY && !logic.explosion) {
-                flag();
+                mark();
             }
         };
         square.addEventHandler(MouseEvent.MOUSE_CLICKED, eventHandler);
@@ -51,7 +51,7 @@ public class Tile extends StackPane {
         setTranslateY(y * size);
     }
 
-    void flag() {
+    void mark() {
         if (!isOpen) {
             square.setFill(Color.RED);
         } else {
