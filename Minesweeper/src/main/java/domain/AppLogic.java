@@ -96,4 +96,5 @@ public class AppLogic {
     public long[][] getNeighbouringBombs() {
         return neighbouringBombs;
     }
+    
 }

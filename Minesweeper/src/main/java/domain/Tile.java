@@ -15,6 +15,7 @@ public class Tile extends StackPane {
     private final int size = 40;
     public boolean hasBomb;
     public boolean isOpen = false;
+    public boolean isMarked = false;
 
     AppLogic logic;
 
@@ -52,12 +53,12 @@ public class Tile extends StackPane {
     }
 
     void mark() {
-        if (!isOpen) {
+        if (!isMarked) {
             square.setFill(Color.RED);
         } else {
             square.setFill(Color.AQUAMARINE);
         }
-        isOpen = !isOpen;
+        isMarked = !isMarked;
     }
 
     void open() {
@@ -65,6 +66,9 @@ public class Tile extends StackPane {
             return;
         }
         if (isOpen) {
+            return;
+        }
+        if (isMarked) {
             return;
         }
 
