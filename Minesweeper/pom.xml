@@ -34,9 +34,9 @@
                 <version>0.8.3</version>
                 <configuration>
                     <excludes>
-                        <exclude>Minesweeper/domain/SweeperApp.java</exclude>
+                        <exclude>Minesweeper/gui/MinesweeperUi</exclude>
                     </excludes>
-                </configuration>  
+                </configuration>
                 <executions>
                     <execution>
                         <id>default-prepare-agent</id>
