@@ -15,7 +15,6 @@ public class TestAppLogic {
     @Before
     public void setUp() {
         logic = new AppLogic();
-//        logic.create();
     }
 
     @Test

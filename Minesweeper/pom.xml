@@ -34,7 +34,7 @@
                 <version>0.8.3</version>
                 <configuration>
                     <excludes>
-                        <exclude>Minesweeper/gui/MinesweeperUi</exclude>
+                        <exclude>gui/*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
