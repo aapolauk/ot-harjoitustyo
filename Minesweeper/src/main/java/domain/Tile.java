@@ -1,70 +1,33 @@
 package domain;
 
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
-import javafx.event.EventHandler;
-import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseEvent;
 
-public class Tile extends StackPane {
+public class Tile{
 
     private int x, y;
-    private final int size = 40;
+    
     public boolean hasBomb;
     public boolean isOpen = false;
     public boolean isMarked = false;
 
     AppLogic logic;
 
-    public final Rectangle square = new Rectangle(size - 2, size - 2);
-    public Text text = new Text();
-
     public Tile(int x, int y, boolean hasBomb, AppLogic logic) {
         this.x = x;
         this.y = y;
         this.hasBomb = hasBomb;
         this.logic = logic;
-
-        EventHandler<MouseEvent> eventHandler = (MouseEvent event) -> {
-
-            if (event.getButton() == MouseButton.PRIMARY) {
-                open();
-            }
-
-            if (event.getButton() == MouseButton.SECONDARY && !logic.explosion) {
-                mark();
-            }
-        };
-        square.addEventHandler(MouseEvent.MOUSE_CLICKED, eventHandler);
-        square.setStroke(Color.BLUE);
-        square.setFill(Color.AQUAMARINE);
-
-        text.setFont(Font.font(18));
-        text.setText(hasBomb ? "X" : "");
-        text.setVisible(false);
-
-        this.getChildren().addAll(square, text);
-
-        setTranslateX(x * size);
-        setTranslateY(y * size);
     }
 
-    void mark() {
-        if (!isMarked) {
-            square.setFill(Color.RED);
-        } else {
-            square.setFill(Color.AQUAMARINE);
-        }
+    public AppLogic getLogic() {
+        return logic;
+    }
+    
+    public void mark() {
         isMarked = !isMarked;
     }
 
-    void open() {
-        if (logic.explosion) {
-            return;
-        }
+    public void open() {
+        
         if (isOpen) {
             return;
         }
@@ -73,13 +36,7 @@ public class Tile extends StackPane {
         }
 
         isOpen = true;
-        text.setVisible(true);
-        square.setFill(null);
-
-        if (text.getText().isEmpty()) {
-            logic.getNeighbors(this).forEach(Tile::open);
-        }
-
+        
         if (hasBomb) {
             System.out.println("BOOOM!");
             System.out.println("You lose :[");
@@ -98,9 +55,5 @@ public class Tile extends StackPane {
 
     public int getY() {
         return y;
-    }
-
-    public Text getText() {
-        return text;
     }
 }

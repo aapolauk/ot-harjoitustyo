@@ -9,14 +9,11 @@ import gui.MinesweeperUi;
 public class SweeperApp extends Application {
 
     MinesweeperUi ui = new MinesweeperUi();
-    Scene scene;
     
     @Override
     public void start(Stage stage) throws Exception {
-        
-        scene = new Scene(ui.createField());
         stage.setTitle("Minesweeper");
-        stage.setScene(scene);
+        stage.setScene(ui.getScene());
         stage.show();
     }
     
