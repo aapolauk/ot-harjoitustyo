@@ -67,7 +67,7 @@ public class TileUi extends StackPane {
     }
 
     public void openUi() {
-        if(this.tile.isMarked || this.logic.isExplosion() || this.tile.isOpen) {
+        if (this.tile.isMarked || this.logic.isExplosion() || this.tile.isOpen) {
             return;
         }
         

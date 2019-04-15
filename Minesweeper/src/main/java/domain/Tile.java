@@ -1,7 +1,7 @@
 package domain;
 
 
-public class Tile{
+public class Tile {
 
     private int x, y;
     

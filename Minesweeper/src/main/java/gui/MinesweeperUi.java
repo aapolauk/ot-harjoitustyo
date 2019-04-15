@@ -2,44 +2,51 @@ package gui;
 
 import domain.*;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
 public class MinesweeperUi {
 
     AppLogic logic = new AppLogic();
 
+    VBox root = new VBox();
+    GridPane field = new GridPane();
+
     private final int width = 800;
-    private final int height = 600;
+    private final int height = 630;
 
     private final int xTiles = logic.getxTiles();
     private final int yTiles = logic.getyTiles();
 
-    private final Tile[][] grid = logic.getGrid();
-    private final TileUi[][] uiGrid = new TileUi[xTiles][yTiles];
+    private Tile[][] grid = logic.getGrid();
+    private TileUi[][] uiGrid = new TileUi[xTiles][yTiles];
     Scene scene;
 
     public MinesweeperUi() {
-        scene = new Scene(createField());
+        scene = new Scene(createScene());
     }
 
     public Scene getScene() {
         return scene;
     }
 
-    public Pane createField() {
-        Pane root = new Pane();
-        root.setPrefSize(width, height);
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
 
+    public void createField() {
         logic.create();
-
         for (int y = 0; y < yTiles; y++) {
             for (int x = 0; x < xTiles; x++) {
                 Tile tile = grid[x][y];
                 TileUi tileUi = new TileUi(tile);
                 uiGrid[x][y] = tileUi;
 
-                root.getChildren().add(tileUi);
+                field.getChildren().add(tileUi);
 
                 int bombs = (int) logic.getNeighbouringBombs()[x][y];
                 if (bombs > 0) {
@@ -76,7 +83,7 @@ public class MinesweeperUi {
         for (int x = 0; x < xTiles; x++) {
             for (int y = 0; y < yTiles; y++) {
                 int[] coordinates = new int[]{
-                    -1, -1,   -1, 0,   -1, 1,   0, -1,   0, 1,   1, -1,   1, 0,   1, 1
+                    -1, -1, -1, 0, -1, 1, 0, -1, 0, 1, 1, -1, 1, 0, 1, 1
                 };
 
                 for (int i = 0; i < coordinates.length; i++) {
@@ -90,8 +97,37 @@ public class MinesweeperUi {
                 }
             }
         }
+
+    }
+
+    public Pane createScene() {
+        Button button = new Button("New game");
         
+        button.setOnAction((event) -> {
+            root.getChildren().clear();
+            field.getChildren().clear();
+            setLogic(new AppLogic());
+            setGrid(logic.getGrid());
+            createField();
+            root.getChildren().add(button);
+            root.getChildren().add(field);
+        });
+
+        root.setPrefSize(width, height);
+
+        createField();
+
+        root.getChildren().add(button);
+        root.getChildren().add(field);
+
         return root;
     }
 
+    public void setLogic(AppLogic logic) {
+        this.logic = logic;
+    }
+
+    public void setGrid(Tile[][] grid) {
+        this.grid = grid;
+    }
 }

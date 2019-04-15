@@ -1,7 +1,6 @@
 package domain;
 
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 import gui.MinesweeperUi;
 
@@ -12,6 +11,7 @@ public class SweeperApp extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+        
         stage.setTitle("Minesweeper");
         stage.setScene(ui.getScene());
         stage.show();

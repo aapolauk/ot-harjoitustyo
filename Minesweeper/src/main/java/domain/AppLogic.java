@@ -85,7 +85,7 @@ public class AppLogic {
         return yTiles;
     }
     
-    public void setGrid(Tile[][] grid){
+    public void setGrid(Tile[][] grid) {
         for (int i = 0; i < grid[0].length; i++) {
             for (int j = 0; j < grid.length; j++) {
                 this.grid[i][j] = grid[i][j];
@@ -100,4 +100,6 @@ public class AppLogic {
     public boolean isExplosion() {
         return explosion;
     }
+    
+    
 }
