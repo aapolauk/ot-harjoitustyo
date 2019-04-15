@@ -18,6 +18,8 @@ Sovellus jolla voi pelata miinaharava peliä.
 
 - ruudun merkin voi poistaa
 
+- voitosta ja häviöstä ilmestyy viesti
+
 ### Jatkokehitysideat
 
 - pelaaja voi muokata pelikenttää itse (kentän koko, miinojen määrä yms.)
