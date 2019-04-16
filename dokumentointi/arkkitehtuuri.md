@@ -1,1 +1,1 @@
-![Luokkakaavio](https://user-images.githubusercontent.com/48727015/55833391-14597980-5b20-11e9-939b-456c6013cfa5.PNG)
+![Luokkakaavio](https://user-images.githubusercontent.com/48727015/56224551-74987000-6078-11e9-9390-5d702256bec9.PNG)
