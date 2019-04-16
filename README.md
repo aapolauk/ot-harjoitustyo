@@ -1,6 +1,6 @@
 # Miinaharava
 
-Soveluksella on tarkoitus pelata miinaharavaa.
+Sovelluksella on tarkoitus pelata miinaharavaa. Pelin tarkoitus on selvittää ruudut joissa on miina. Nämä ruudut pelaaja voi merkitä klikkaamalla hiiren oikealla näppäimellä. Ruutuja voi avata hiiren vasemmalla näppäimellä. Ruudussa oleva luku kertoo naapuriruuduissa olevien miinojen määrän ja tämän avulla pelaajan on tarkoitus päätellä missä miinat sijaitsevat.
 
 ## Dokumentaatio
 
