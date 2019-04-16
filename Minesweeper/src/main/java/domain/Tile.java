@@ -37,6 +37,7 @@ public class Tile implements Comparable<Tile> {
             System.out.println("BOOOM!");
             System.out.println("You lose :[");
             logic.explosion = true;
+            return;
         }
         
         if (--logic.tilesThatDoNotHaveBombs == 0) {
