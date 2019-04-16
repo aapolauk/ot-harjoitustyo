@@ -15,6 +15,12 @@ public class TestAppLogic {
     @Before
     public void setUp() {
         logic = new AppLogic();
+        testGrid = logic.getGrid();
+        for (int x = 0; x < logic.getxTiles(); x++) {
+            for (int y = 0; y < logic.getyTiles(); y++) {
+                testGrid[x][y] = new Tile(x, y, true, logic);
+            }
+        }
     }
 
     @Test
@@ -23,19 +29,21 @@ public class TestAppLogic {
     }
 
     @Test
-    public void givesValidPointFalse() {
+    public void givesValidPointTest() {
         assertEquals(false, logic.isValidPoint(-1, 0));
+        assertEquals(true, logic.isValidPoint(1, 1));
+        assertEquals(false, logic.isValidPoint(0, -1));
+        assertEquals(false, logic.isValidPoint(-1, -1));
+        assertEquals(false, logic.isValidPoint(100, 100));
+        assertEquals(false, logic.isValidPoint(-100, 100));
+        assertEquals(false, logic.isValidPoint(1, 100));
+
     }
 
     @Test
-    public void givesValidPointTrue() {
-        assertEquals(true, logic.isValidPoint(1, 1));
+    public void testGetNeighbours() {
+        List<Tile> neighbours = logic.getNeighbors(testGrid[0][0]);
+        assertEquals(true, neighbours.contains(testGrid[0][1]));
+        
     }
-
-//    @Test
-//    public void getNeighborsWorksBadTest() {
-//        Tile tile = logic.getGrid()[2][2];
-//        assertEquals(new ArrayList<>(), logic.getNeighbors(tile));
-//    }
-
 }

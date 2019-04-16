@@ -1,7 +1,7 @@
 package domain;
 
 
-public class Tile {
+public class Tile implements Comparable<Tile> {
 
     private int x, y;
     
@@ -27,10 +27,6 @@ public class Tile {
     }
 
     public void open() {
-        
-        if (isOpen) {
-            return;
-        }
         if (isMarked) {
             return;
         }
@@ -45,7 +41,7 @@ public class Tile {
         
         if (--logic.tilesThatDoNotHaveBombs == 0) {
             System.out.println("You win :]");
-            logic.explosion = true;
+            logic.fieldClear = true;
         }
     }
 
@@ -55,5 +51,15 @@ public class Tile {
 
     public int getY() {
         return y;
+    }
+
+    @Override
+    public int compareTo(Tile o) {
+        int compX = Integer.compare(o.getX(), this.x);
+        int compY = Integer.compare(o.getY(), this.y);
+        if(compY == 1 && compX == 1){
+            return 0;
+        }
+        return 1;
     }
 }

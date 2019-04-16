@@ -12,6 +12,7 @@ public class AppLogic {
     private Tile[][] grid = new Tile[xTiles][yTiles];
 
     boolean explosion = false;
+    boolean fieldClear = false;
 
     int tilesThatDoNotHaveBombs = xTiles * yTiles;
     
@@ -100,6 +101,8 @@ public class AppLogic {
     public boolean isExplosion() {
         return explosion;
     }
-    
-    
+
+    public boolean isFieldClear() {
+        return fieldClear;
+    }
 }

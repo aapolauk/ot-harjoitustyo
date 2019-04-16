@@ -29,12 +29,13 @@ public class TileUi extends StackPane {
 
         EventHandler<MouseEvent> eventHandler = (MouseEvent event) -> {
             
-            if (event.getButton() == MouseButton.PRIMARY && !logic.isExplosion()) {
+            if (event.getButton() == MouseButton.PRIMARY && !logic.isExplosion() && !logic.isFieldClear()) {
+                
                 openUi();
                 tile.open();
             }
 
-            if (event.getButton() == MouseButton.SECONDARY && !logic.isExplosion()) {
+            if (event.getButton() == MouseButton.SECONDARY && !logic.isExplosion() && !logic.isFieldClear()) {
                 if (!tile.isMarked) {
                     square.setFill(Color.RED);
                 } else {
