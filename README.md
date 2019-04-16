@@ -37,3 +37,12 @@ Checkstylen määrittelemät tarkistukset suoritetaan komennolla
 ```
  mvn jxr:jxr checkstyle:checkstyle
 ```
+
+### Suoritettavan jar-tiedoston generointi
+
+Jar-tiedosto generoituu komennolla
+
+```
+mvn package
+```
+generoi hakemoistoon _target_ jar-tiedoston _Minesweeper-1.0-SNAPSHOT.jar_
