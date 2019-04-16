@@ -14,4 +14,26 @@ Soveluksella on tarkoitus pelata miinaharavaa.
 
 [Viikko 5](https://github.com/aapolauk/ot-harjoitustyo/releases/tag/Viikko5)
 
+## Komentorivitoiminnot
 
+### Testaus
+
+Testit voidaan suoritaa komennolla
+
+```
+mvn test
+```
+
+Testikattavuusraportti voidaan luoda komennolla
+
+```
+mvn jacoco:report
+```
+
+### Checkstyle
+
+Checkstylen määrittelemät tarkistukset suoritetaan komennolla
+
+```
+ mvn jxr:jxr checkstyle:checkstyle
+```
