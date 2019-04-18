@@ -18,6 +18,10 @@ public class AppLogic {
     
     long[][] neighbouringBombs = new long[xTiles][yTiles];
     
+    int[][] bombTiles = new int[xTiles][yTiles];
+    
+    
+    
     public void create() {
         for (int y = 0; y < yTiles; y++) {
             for (int x = 0; x < xTiles; x++) {
@@ -26,6 +30,7 @@ public class AppLogic {
                 if (putBomb) {
                     int noBombTiles = getTilesThatDoNotHaveBombs();
                     setTilesThatDoNotHaveBombs(--noBombTiles);
+                    bombTiles[x][y] = 1;
                 }
                 grid[x][y] = tile;
             }
@@ -104,5 +109,9 @@ public class AppLogic {
 
     public boolean isFieldClear() {
         return fieldClear;
+    }
+
+    public int[][] getBombTiles() {
+        return bombTiles;
     }
 }

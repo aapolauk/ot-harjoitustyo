@@ -3,11 +3,13 @@ package gui;
 import domain.*;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Popup;
 
 public class MinesweeperUi {
 
@@ -24,6 +26,7 @@ public class MinesweeperUi {
 
     private Tile[][] grid = logic.getGrid();
     private TileUi[][] uiGrid = new TileUi[xTiles][yTiles];
+    
     Scene scene;
 
     public MinesweeperUi() {
@@ -79,11 +82,23 @@ public class MinesweeperUi {
                 }
             }
         }
+        
+        for (int x = 0; x < xTiles; x++) {
+            for (int y = 0; y < yTiles; y++) {
+                for (int x1 = 0; x1 < xTiles; x1++) {
+                    for (int y1 = 0; y1 < yTiles; y1++) {
+                        if (logic.getBombTiles()[x1][y1] == 1){
+                            uiGrid[x][y].addBombTiles(uiGrid[x1][y1]);
+                        }
+                    }
+                }
+            }
+        }
 
         for (int x = 0; x < xTiles; x++) {
             for (int y = 0; y < yTiles; y++) {
                 int[] coordinates = new int[]{
-                    -1, -1, -1, 0, -1, 1, 0, -1, 0, 1, 1, -1, 1, 0, 1, 1
+                    -1, -1,  -1, 0,  -1, 1,  0, -1,   0, 1,  1, -1,  1, 0,  1, 1
                 };
 
                 for (int i = 0; i < coordinates.length; i++) {
@@ -97,7 +112,6 @@ public class MinesweeperUi {
                 }
             }
         }
-
     }
 
     public Pane createScene() {
@@ -119,6 +133,8 @@ public class MinesweeperUi {
 
         root.getChildren().add(button);
         root.getChildren().add(field);
+        
+       
 
         return root;
     }
@@ -130,4 +146,14 @@ public class MinesweeperUi {
     public void setGrid(Tile[][] grid) {
         this.grid = grid;
     }
+
+    public VBox getRoot() {
+        return root;
+    }
+
+    public GridPane getField() {
+        return field;
+    }
+    
+    
 }
