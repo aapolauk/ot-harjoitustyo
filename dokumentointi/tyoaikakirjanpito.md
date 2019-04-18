@@ -11,4 +11,6 @@
 | 14.4. | 4h    | sain erotuksen loppun  |
 | 15.4. | 2h    | tein napin, jota painamalla voidaan aloittaa uusi peli  |
 | 16.4. | 3h    | tein lisää testejä   |
-| aikojen summa | 32h  |
+| 19.4. | 2h    | Kun klikkaa miinaruutua, niin kaikki muutkin miinat "räjähtävät" ja tulevat esille  | 
+| 19.4. | 1h    | tein popup ikkunat jotka tulevat esille, kun voittaa tai häviää  |
+| aikojen summa | 35h  |
