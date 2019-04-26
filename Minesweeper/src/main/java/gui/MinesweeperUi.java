@@ -3,17 +3,17 @@ package gui;
 import domain.*;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.stage.Popup;
 
 public class MinesweeperUi {
 
     AppLogic logic = new AppLogic();
+    
+    Color[] colors = { Color.BLACK, Color.BLUE, Color.GREEN, Color.MEDIUMTURQUOISE, Color.BROWN, Color.DEEPPINK, Color.INDIGO, Color.ORANGE, Color.CRIMSON };
+
 
     VBox root = new VBox();
     GridPane field = new GridPane();
@@ -54,31 +54,7 @@ public class MinesweeperUi {
                 int bombs = (int) logic.getNeighbouringBombs()[x][y];
                 if (bombs > 0) {
                     tileUi.getText().setText(String.valueOf(bombs));
-
-                    if (bombs == 1) {
-                        tileUi.getText().setFill(Color.BLUE);
-                    }
-                    if (bombs == 2) {
-                        tileUi.getText().setFill(Color.GREEN);
-                    }
-                    if (bombs == 3) {
-                        tileUi.getText().setFill(Color.MEDIUMTURQUOISE);
-                    }
-                    if (bombs == 4) {
-                        tileUi.getText().setFill(Color.BROWN);
-                    }
-                    if (bombs == 5) {
-                        tileUi.getText().setFill(Color.DEEPPINK);
-                    }
-                    if (bombs == 6) {
-                        tileUi.getText().setFill(Color.INDIGO);
-                    }
-                    if (bombs == 7) {
-                        tileUi.getText().setFill(Color.ORANGE);
-                    }
-                    if (bombs == 8) {
-                        tileUi.getText().setFill(Color.CRIMSON);
-                    }
+                    tileUi.getText().setFill(colors[bombs]);
                 }
             }
         }

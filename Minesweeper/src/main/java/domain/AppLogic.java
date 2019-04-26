@@ -25,7 +25,7 @@ public class AppLogic {
     public void create() {
         for (int y = 0; y < yTiles; y++) {
             for (int x = 0; x < xTiles; x++) {
-                boolean putBomb = (Math.random() < 0.1);
+                boolean putBomb = (Math.random() < 0.3);
                 Tile tile = new Tile(x, y, putBomb, this);
                 if (putBomb) {
                     int noBombTiles = getTilesThatDoNotHaveBombs();
