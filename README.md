@@ -13,6 +13,7 @@ Sovelluksella on tarkoitus pelata miinaharavaa. Pelin tarkoitus on selvittää r
 ## Releaset
 
 [Viikko 5](https://github.com/aapolauk/ot-harjoitustyo/releases/tag/Viikko5)
+[Viikko 6](https://github.com/aapolauk/ot-harjoitustyo/releases/tag/Viikko6)
 
 ## Komentorivitoiminnot
 
