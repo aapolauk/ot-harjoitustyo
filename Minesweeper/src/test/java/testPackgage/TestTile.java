@@ -31,9 +31,9 @@ public class TestTile {
     @Test
     public void markMarks() {
         assertEquals(false, tileBomb.isMarked);
-        tileBomb.mark();
+        tileBomb.toggleMark();
         assertEquals(true, tileBomb.isMarked);
-        tileBomb.mark();
+        tileBomb.toggleMark();
         assertEquals(false, tileBomb.isMarked);
     }
 
@@ -48,7 +48,7 @@ public class TestTile {
 
     @Test
     public void openWhileMarked() {
-        tileBomb.mark();
+        tileBomb.toggleMark();
         tileBomb.open();
         assertEquals(false, tileBomb.isOpen);
     }

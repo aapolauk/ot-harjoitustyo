@@ -16,16 +16,12 @@ public class TestAppLogic {
     public void setUp() {
         logic = new AppLogic();
         testGrid = logic.getGrid();
-        for (int x = 0; x < logic.getxTiles(); x++) {
-            for (int y = 0; y < logic.getyTiles(); y++) {
-                testGrid[x][y] = new Tile(x, y, true, logic);
-            }
-        }
+        logic.create();
     }
 
     @Test
     public void numberOfTilesVertically() {
-        assertEquals(15, logic.getGrid()[0].length);
+        assertEquals(15, testGrid[0].length);
     }
 
     @Test
@@ -43,7 +39,6 @@ public class TestAppLogic {
     @Test
     public void testGetNeighbours() {
         List<Tile> neighbours = logic.getNeighbors(testGrid[0][0]);
-        assertEquals(true, neighbours.contains(testGrid[0][1]));
-        
+        assertEquals(true, neighbours.contains(testGrid[0][1]));   
     }
 }

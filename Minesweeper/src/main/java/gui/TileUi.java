@@ -48,7 +48,7 @@ public class TileUi extends StackPane {
                 } else {
                     square.setFill(Color.AQUAMARINE);
                 }
-                tile.mark();
+                tile.toggleMark();
             }
         };
         
@@ -112,7 +112,7 @@ public class TileUi extends StackPane {
         square.setFill(null);
     }
     
-    public void showPopupWin(){
+    public void showPopupWin() {
         Stage pop = new Stage();
         VBox box = new VBox();
         Label label = new Label("You win :]");
@@ -137,7 +137,7 @@ public class TileUi extends StackPane {
         pop.show();
     }
     
-    public void showPopupLose(){
+    public void showPopupLose() {
         Stage pop = new Stage();
         VBox box = new VBox();
         Label label = new Label("You lose :[");
