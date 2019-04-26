@@ -13,4 +13,5 @@
 | 16.4. | 3h    | tein lisää testejä   |
 | 19.4. | 2h    | Kun klikkaa miinaruutua, niin kaikki muutkin miinat "räjähtävät" ja tulevat esille  | 
 | 19.4. | 1h    | tein popup ikkunat jotka tulevat esille, kun voittaa tai häviää  |
-| aikojen summa | 35h  |
+| 26.4. | 2h    | tein java docin ja parantelin testejä  | 
+| aikojen summa | 37h  |
