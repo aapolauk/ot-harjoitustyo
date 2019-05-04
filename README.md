@@ -4,6 +4,8 @@ Sovelluksella on tarkoitus pelata miinaharavaa. Pelin tarkoitus on selvittää r
 
 ## Dokumentaatio
 
+[Käyttöohje](https://github.com/aapolauk/ot-harjoitustyo/blob/master/dokumentointi/kayttoohje.md)
+
 [Arkkitehtuuri](https://github.com/aapolauk/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
 
 [Työaikakirjanpito](https://github.com/aapolauk/ot-harjoitustyo/blob/master/dokumentointi/tyoaikakirjanpito.md)
