@@ -50,3 +50,14 @@ Jar-tiedosto generoituu komennolla
 mvn package
 ```
 generoi hakemoistoon _target_ jar-tiedoston _Minesweeper-1.0-SNAPSHOT.jar_
+
+### JavaDoc
+
+JavaDoc generoituu komennolla
+
+```
+mvn javadoc:javadoc
+```
+JavaDoc löytyy hakemistosta _target/site/apidocs/index.html_
+
+
