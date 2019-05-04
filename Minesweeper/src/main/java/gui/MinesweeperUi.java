@@ -37,10 +37,6 @@ public class MinesweeperUi {
         return scene;
     }
 
-    public void setScene(Scene scene) {
-        this.scene = scene;
-    }
-
     public void createField() {
         logic.create();
         for (int y = 0; y < yTiles; y++) {
@@ -110,8 +106,6 @@ public class MinesweeperUi {
         root.getChildren().add(button);
         root.getChildren().add(field);
         
-       
-
         return root;
     }
 
@@ -122,14 +116,4 @@ public class MinesweeperUi {
     public void setGrid(Tile[][] grid) {
         this.grid = grid;
     }
-
-    public VBox getRoot() {
-        return root;
-    }
-
-    public GridPane getField() {
-        return field;
-    }
-    
-    
 }
