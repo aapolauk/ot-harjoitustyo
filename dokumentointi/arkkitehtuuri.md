@@ -12,3 +12,9 @@ Kaikki sovelluksen toiminnallisuudet perustuvat ruutujen klikkailuihin. Alla on 
 ![Sekvenssikaavio](https://user-images.githubusercontent.com/48727015/56227458-343bf080-607e-11e9-8792-6ea40fa6d6d0.png)
 
 Muut toiminnallisuudet ovat samankaltaisia.
+
+## Heikkouksia ohjelman rakenteessa
+
+Luokassa *TileUi* on  metodit _showPopUpLose_ ja _showPopUpWin_, jotka olisivat parempia luokassa *MinesweeperUi*.
+
+Luokassa *AppLogic* on joitakin muuttujia, esim. _neighbouringBombs_, jotka olisivat kätevämpiä *Tile* luokassa.
