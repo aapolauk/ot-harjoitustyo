@@ -20,6 +20,8 @@ Sovelluksella on tarkoitus pelata miinaharavaa. Pelin tarkoitus on selvittää r
 
 [Viikko 6](https://github.com/aapolauk/ot-harjoitustyo/releases/tag/Viikko6)
 
+[Loppupalautus](https://github.com/aapolauk/ot-harjoitustyo/releases/tag/Minesweeper)
+
 ## Komentorivitoiminnot
 
 ### Testaus
